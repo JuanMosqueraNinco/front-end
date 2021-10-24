@@ -1,7 +1,7 @@
 window.onload = function traeInformacionCategorias(){
 
     $.ajax({
-        url: "http://150.230.75.10:8080/api/Category/all",
+        url: "http://150.230.75.10/api/Category/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -48,7 +48,7 @@ function actualizarInformacionCategoria() {
     let dataToSend = JSON.stringify(myData);
     console.log(dataToSend);
     $.ajax({
-      url: "http://150.230.75.10:8080/api/Category/update",
+      url: "http://150.230.75.10/api/Category/update",
       type: "PUT",
       data: dataToSend,
       contentType: "application/JSON",
@@ -68,7 +68,7 @@ function actualizarInformacionCategoria() {
     console.log("mi dato es " + JSON.stringify(myData));
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-      url: "http://150.230.75.10:8080/api/Category/" + idCategoria,
+      url: "http://150.230.75.10/api/Category/" + idCategoria,
       type: "DELETE",
       data: dataToSend,
       contentType: "application/JSON",

@@ -8,7 +8,7 @@ window.onload = function () {
 
 function traerInformacionCategorias() {
   $.ajax({
-    url: "http://150.230.75.10/api/Category/all",
+    url: "http://150.230.75.10:8080/api/Category/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -49,7 +49,7 @@ function guardarInformacionCategorias() {
     dataType: "JSON",
     data: JSON.stringify(var2),
 
-    url: "http://150.230.75.10/api/Category/save",
+    url: "http://150.230.75.10:8080/api/Category/save",
 
     success: function (response) {
       console.log(response);
@@ -68,7 +68,7 @@ function guardarInformacionCategorias() {
 ///////////////////Bikes/////////////////////////////////////
 function traerInformacionBikes() {
   $.ajax({
-    url: "http://150.230.75.10/api/Bike/all",
+    url: "http://150.230.75.10:8080/api/Bike/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -119,7 +119,7 @@ function guardarInformacionBikes() {
     dataType: "JSON",
     data: JSON.stringify(var3),
 
-    url: "http://150.230.75.10/api/Bike/save",
+    url: "http://150.230.75.10:8080/api/Bike/save",
 
     success: function (response) {
       console.log(response);
@@ -137,7 +137,7 @@ function guardarInformacionBikes() {
 //////////////////////Clientes//////////////////////////////////
 function traerInformacionClientes() {
   $.ajax({
-    url: "http://150.230.75.10/api/Client/all",
+    url: "http://150.230.75.10:8080/api/Client/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -180,7 +180,7 @@ function guardarInformacionClientes() {
     dataType: "JSON",
     data: JSON.stringify(var4),
 
-    url: "http://150.230.75.10/api/Client/save",
+    url: "http://150.230.75.10:8080/api/Client/save",
 
     success: function (response) {
       console.log(response);

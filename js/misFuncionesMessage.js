@@ -7,7 +7,7 @@ window.onload = function () {
 
 function traerInformacionBikes_Bike() {
   $.ajax({
-    url: "http://150.230.75.10/api/Bike/all",
+    url: "http://150.230.75.10:8080/api/Bike/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -63,7 +63,7 @@ function guardarInformacionMensaje() {
     dataType: "JSON",
     data: JSON.stringify(var2),
 
-    url: "http://150.230.75.10/api/Message/save",
+    url: "http://150.230.75.10:8080/api/Message/save",
 
     success: function (response) {
       console.log(response);
@@ -81,7 +81,7 @@ function guardarInformacionMensaje() {
 
 function traerInformacionMensajes() {
   $.ajax({
-    url: "http://150.230.75.10/api/Message/all",
+    url: "http://150.230.75.10:8080/api/Message/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -153,7 +153,7 @@ function actualizarInformacionMessage() {
   let dataToSend = JSON.stringify(myData);
   console.log(dataToSend);
   $.ajax({
-    url: "http://150.230.75.10/api/Message/update",
+    url: "http://150.230.75.10:8080/api/Message/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -180,7 +180,7 @@ function borrarMensaje(idMessageAEliminar) {
   console.log("mi dato es " + myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://150.230.75.10/api/Message/" + idMessageAEliminar,
+    url: "http://150.230.75.10:8080/api/Message/" + idMessageAEliminar,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",

@@ -1,6 +1,6 @@
 window.onload = function traerInformacionBikes_Bike() {
   $.ajax({
-    url: "http://150.230.75.10/api/Bike/all",
+    url: "http://150.230.75.10:8080/api/Bike/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -56,7 +56,7 @@ function actualizarInformacionBike() {
   let dataToSend = JSON.stringify(myData);
   console.log(dataToSend);
   $.ajax({
-    url: "http://150.230.75.10/api/Bike/update",
+    url: "http://150.230.75.10:8080/api/Bike/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -75,7 +75,7 @@ function borrarBike(idBikeAEliminar) {
   console.log("mi dato es " + myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://150.230.75.10/api/Bike/" + idBikeAEliminar,
+    url: "http://150.230.75.10:8080/api/Bike/" + idBikeAEliminar,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",

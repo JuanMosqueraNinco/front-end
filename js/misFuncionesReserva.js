@@ -7,7 +7,7 @@ window.onload = function () {
 
 function traerInformacionBikes_Bike() {
   $.ajax({
-    url: "http://150.230.75.10/api/Bike/all",
+    url: "http://150.230.75.10:8080/api/Bike/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -46,7 +46,7 @@ function pintarRespuestaBikes(respuesta) {
 
 function traerInformacionReservas() {
   $.ajax({
-    url: "http://150.230.75.10/api/Reservation/all",
+    url: "http://150.230.75.10:8080/api/Reservation/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -105,7 +105,7 @@ function guardarInformacionReservacion() {
       dataType: "JSON",
       data: JSON.stringify(var2),
 
-      url: "http://150.230.75.10/api/Reservation/save",
+      url: "http://150.230.75.10:8080/api/Reservation/save",
 
       success: function (response) {
         console.log(response);
@@ -150,7 +150,7 @@ function actualizarInformacionReserva() {
   let dataToSend = JSON.stringify(myData);
   console.log(dataToSend);
   $.ajax({
-    url: "http://150.230.75.10/api/Reservation/update",
+    url: "http://150.230.75.10:8080/api/Reservation/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -169,7 +169,7 @@ function borrarReserva(idElemento) {
   console.log("mi dato es " + myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://150.230.75.10/api/Reservation/" + idElemento,
+    url: "http://150.230.75.10:8080/api/Reservation/" + idElemento,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",
